@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часы разных типов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Clock.css">
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center py-5">
+        <!-- Круглые часы -->
+        <div class="clock-container mb-5">
+            <h2 class="text-center mb-4" >Круглые часы</h2>
+            <div class="round-clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand sec-hand"></div>
+                    <div class="center-point"></div>
+                </div>
+                <div class="number-container"></div>
+            </div>
+        </div>
+
+        <!-- Квадратные часы -->
+        <div class="clock-container mb-5">
+            <h2 class="text-center mb-4">Квадратные часы</h2>
+            <div class="square-clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand sec-hand"></div>
+                    <div class="center-point"></div>
+                </div>
+                <div class="number-container"></div>
+            </div>
+        </div>
+
+        <!-- Электронные часы -->
+        <div class="digital-clock-container">
+            <h2 class="text-center mb-4">Электронные часы</h2>
+            <div class="digital-clock">
+                <span class="hours">00</span>:
+                <span class="minutes">00</span>:
+                <span class="seconds">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Clock.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

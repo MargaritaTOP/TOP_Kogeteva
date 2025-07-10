@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ суши</title>
+    <link rel="stylesheet" href="Sushi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Заказ суши</h1>
+        <form id="sushiOrderForm">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" name="address" required>
+                <div class="error-message" id="address-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error-message" id="phone-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="sticks">Количество палочек:</label>
+                <input type="number" id="sticks" name="sticks" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label>Вид палочек:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="stickType" value="regular" checked> Обычные
+                    </label>
+                    <label>
+                        <input type="radio" name="stickType" value="training"> Учебные
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sushi">Выберите суши:</label>
+                <select id="sushi" name="sushi" multiple size="5" required>
+                    <option value="california">Калифорния</option>
+                    <option value="philadelphia">Филадельфия</option>
+                    <option value="alaska">Аляска</option>
+                    <option value="spicy_tuna">Острый тунец</option>
+                    <option value="salmon">С лососем</option>
+                    <option value="shrimp">С креветкой</option>
+                    <option value="vegetable">Овощные</option>
+                </select>
+                <div class="hint">(Удерживайте Ctrl для выбора нескольких вариантов)</div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="napkins" checked> Нужно ли класть салфетки?
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Дополнительный комментарий:</label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Оформить заказ</button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+            <h2>Спасибо за ваш заказ!</h2>
+            <p>Мы свяжемся с вами в ближайшее время для подтверждения и для уточнения деталей заказа.</p>
+        </div>
+    </div>
+
+    <script src="Sushi.js"></script>
+</body>
+</html>
