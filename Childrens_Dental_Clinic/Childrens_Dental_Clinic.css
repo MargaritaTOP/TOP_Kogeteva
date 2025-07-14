@@ -119,6 +119,255 @@ body {
 	justify-content: space-between;
 }
 
+/* Стили для карточек услуг на главной */
+.service-item {
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	transition: all 0.3s;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.service-item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background-color: #4fc3f7;
+}
+
+.service-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+	font-size: 2.5rem;
+	color: #4fc3f7;
+	margin-bottom: 15px;
+}
+
+/* Стили для раздела цен */
+.prices-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 25px;
+	margin-top: 30px;
+}
+
+.price-category {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+	border-top: 4px solid #4fc3f7;
+	overflow: hidden;
+}
+
+.price-category:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.category-header {
+	padding: 18px 20px;
+	background-color: #f8f9fa;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+.category-header i {
+	font-size: 1.5rem;
+	color: #4fc3f7;
+	margin-right: 12px;
+}
+
+.category-header h3 {
+	margin: 0;
+	font-size: 1.25rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.price-list {
+	padding: 0 20px;
+}
+
+.price-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+	border-bottom: 1px dashed #eaeaea;
+	align-items: center;
+}
+
+.price-item:last-child {
+	border-bottom: none;
+}
+
+.price-service {
+	font-weight: 500;
+	color: #555;
+	font-size: 0.95rem;
+	flex: 1;
+}
+
+.price-amount {
+	font-weight: 600;
+	color: #4fc3f7;
+	font-size: 0.95rem;
+	margin-left: 15px;
+	white-space: nowrap;
+}
+
+/* Стили для раздела акций */
+.promotions-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	gap: 30px;
+	margin-top: 30px;
+}
+
+.promotion-card {
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+	position: relative;
+	border-top: 4px solid #4fc3f7;
+	transition: all 0.3s ease;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.promotion-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.promotion-badge {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: #4fc3f7;
+	color: white;
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	z-index: 1;
+	text-transform: uppercase;
+}
+
+.promotion-content {
+	padding: 25px;
+	padding-top: 35px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.promotion-card h3 {
+	color: #333;
+	margin-bottom: 12px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	padding-right: 70px;
+	line-height: 1.4;
+}
+
+.promotion-date {
+	color: #666;
+	font-size: 0.9rem;
+	margin-bottom: 15px;
+	font-style: italic;
+}
+
+.promotion-card p {
+	color: #555;
+	margin-bottom: 20px;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	flex-grow: 1;
+}
+
+.btn-primary {
+	background-color: #4fc3f7;
+	border-color: #4fc3f7;
+	align-self: flex-start;
+}
+
+.btn-primary:hover {
+	background-color: #3da8d8;
+	border-color: #3da8d8;
+}
+
+@media (max-width: 768px) {
+	.promotions-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.promotion-content {
+		padding: 20px;
+		padding-top: 30px;
+	}
+
+	.content-template {
+		transition: opacity 0.3s ease;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.content-template.show {
+		opacity: 1;
+		height: auto;
+	}
+
+	#yandexMap {
+		width: 100%;
+		height: 400px;
+		border-radius: 8px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.map-container {
+		margin-top: 20px;
+		position: relative;
+	}
+
+	.promotion-card h3 {
+		font-size: 1.2rem;
+		padding-right: 60px;
+	}
+}
+
+@media (max-width: 768px) {
+	.prices-container {
+		grid-template-columns: 1fr;
+	}
+
+	.category-header {
+		padding: 15px;
+	}
+
+	.price-list {
+		padding: 0 15px;
+	}
+
+	.price-item {
+		padding: 12px 0;
+	}
+}
+
 .service-item h4 {
 	margin: 10px 0 0 0;
 	padding: 0 5px;
@@ -379,4 +628,124 @@ body {
 	.price-category {
 		flex: 1 1 100%;
 	}
+}
+
+.services-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 25px;
+	margin-top: 30px;
+}
+
+.service-category {
+	background: white;
+	border-radius: 12px;
+	padding: 25px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s, box-shadow 0.3s;
+	border-top: 4px solid #4fc3f7;
+}
+
+.service-category:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.category-header i {
+	font-size: 1.8rem;
+	color: #4fc3f7;
+	margin-right: 15px;
+}
+
+.service-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.service-list li {
+	padding: 8px 0;
+	border-bottom: 1px dashed #eee;
+	display: flex;
+	align-items: center;
+}
+
+.service-list li:last-child {
+	border-bottom: none;
+}
+
+.service-list i {
+	color: #4fc3f7;
+	margin-right: 10px;
+	font-size: 0.9rem;
+}
+
+#appointmentModal .modal-header {
+	background-color: #4fc3f7;
+	color: white;
+}
+
+#appointmentModal .modal-content {
+	border-radius: 15px;
+}
+
+#appointmentModal .btn-primary {
+	background-color: #4fc3f7;
+	border-color: #4fc3f7;
+}
+
+/* Стили для карусели */
+#clinicCarousel {
+	max-height: 500px;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 10px !important;
+}
+
+.carousel-inner {
+	border-radius: 10px;
+}
+
+.carousel-item img {
+	object-fit: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	background-color: rgba(79, 195, 247, 0.3);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	background-color: rgba(79, 195, 247, 0.7);
+}
+
+@media (max-width: 768px) {
+	.carousel-item img {
+		height: 300px;
+	}
+
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.footer-menu a.active {
+	color: #4fc3f7;
+	font-weight: bold;
 }

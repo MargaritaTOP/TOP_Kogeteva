@@ -69,7 +69,6 @@
             <section class="section-1">
                 <h2>Наши услуги</h2>
 
-
                 <div class="services-grid">
 
                     <div class="service-item">
@@ -87,7 +86,6 @@
                         <h4>Гигиена полости рта</h4>
                         <p>Профессиональная чистка и обучение уходу</p>
                     </div>
-
 
                     <div class="service-item">
                         <i class="fas fa-baby service-icon"></i>
@@ -139,7 +137,64 @@
 
             <section class="section-2">
                 <h2>О нашей клинике</h2>
-                <img src="clinic-interior.jpg" alt="Интерьер клиники" class="img-fluid rounded mb-3">
+
+                <!-- Карусель -->
+                <div id="clinicCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <!-- Индикаторы  -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="5"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="6"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="7"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="8"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="images/4.png" class="d-block w-100" alt="Интерьер клиники 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/5.png" class="d-block w-100" alt="Интерьер клиники 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/6.png" class="d-block w-100" alt="Интерьер клиники 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/7.png" class="d-block w-100" alt="Игровая зона 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/8.png" class="d-block w-100" alt="Игровая зона 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/9.png" class="d-block w-100" alt="Игровая зона 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/10.png" class="d-block w-100" alt="Кабинет стоматолога 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/11.png" class="d-block w-100" alt="Кабинет стоматолога 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/12.png" class="d-block w-100" alt="Кабинет стоматолога 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#clinicCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#clinicCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
                 <p>Мы специализируемся на лечении детей всех возрастов с использованием современных технологий и
                     подходов.</p>
                 <p>Наша клиника создана специально для детей - яркий интерьер, игровая зона и доброжелательные врачи
@@ -151,27 +206,19 @@
         <div class="clearfix"></div>
     </div>
 
-
-    <!-- <aside class="aside-right float-end">
-        <h3>Новости</h3>
-        <p>Новая услуга: седация для детей</p>
-        <p>Акция: скидка 20% на первый визит</p>
-    </aside> -->
-
     <div class="clearfix"></div>
-    </div>
 
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 footer-menu">
                     <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Врачи</a></li>
-                        <li><a href="#">Цены</a></li>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#doctors">Врачи</a></li>
+                        <li><a href="#prices">Цены</a></li>
+                        <li><a href="#promotions">Акции</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 social-icons">
@@ -183,48 +230,75 @@
         </div>
     </footer>
 
-
     <div id="services-content" class="content-template">
-        <h2>Наши услуги</h2>
-        <div class="services-list">
-            <div class="service-category">
-                <h3><i class="fas fa-teeth"></i> Терапевтическая стоматология</h3>
-                <ul>
-                    <li>Лечение кариеса молочных и постоянных зубов</li>
-                    <li>Лечение пульпита и периодонтита</li>
-                    <li>Герметизация фиссур</li>
-                    <li>Реминерализирующая терапия</li>
-                    <li>Лечение стоматитов</li>
-                </ul>
-            </div>
+        <div class="container">
+            <h2 class="text-center mb-4">Наши услуги</h2>
+            <p class="text-center mb-5">Качественное лечение с заботой о вашем ребенке</p>
 
-            <div class="service-category">
-                <h3><i class="fas fa-teeth-open"></i> Ортодонтия</h3>
-                <ul>
-                    <li>Исправление прикуса</li>
-                    <li>Пластинки для зубов</li>
-                    <li>Брекет-системы для детей</li>
-                    <li>Капы для выравнивания</li>
-                </ul>
-            </div>
+            <div class="services-container">
+                <!-- Терапевтическая стоматология -->
+                <div class="service-category">
 
-            <div class="service-category">
-                <h3><i class="fas fa-shield-alt"></i> Профилактика</h3>
-                <ul>
-                    <li>Профессиональная гигиена</li>
-                    <li>Фторирование зубов</li>
-                    <li>Обучение гигиене</li>
-                    <li>Профилактические осмотры</li>
-                </ul>
-            </div>
+                    <div class="category-header">
+                        <i class="fas fa-tooth"></i>
+                        <h3>Терапевтическая стоматология</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Лечение кариеса молочных зубов</li>
+                        <li><i class="fas fa-check-circle"></i> Лечение пульпита и периодонтита</li>
+                        <li><i class="fas fa-check-circle"></i> Герметизация фиссур</li>
+                        <li><i class="fas fa-check-circle"></i> Реминерализирующая терапия</li>
+                        <li><i class="fas fa-check-circle"></i> Лечение стоматитов</li>
+                    </ul>
+                    <button class="btn btn-outline-primary service-btn">Подробнее</button>
+                </div>
 
-            <div class="service-category">
-                <h3><i class="fa-solid fa-hand-holding-medical"></i>Хирургия</h3>
-                <ul>
-                    <li>Удаление зубов</li>
-                    <li>Пластика уздечек</li>
-                    <li>Детское протезирование</li>
-                </ul>
+                <!-- Ортодонтия -->
+                <div class="service-category">
+
+                    <div class="category-header">
+                        <i class="fas fa-teeth-open"></i>
+                        <h3>Ортодонтия</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Исправление прикуса</li>
+                        <li><i class="fas fa-check-circle"></i> Брекет-системы для детей</li>
+                        <li><i class="fas fa-check-circle"></i> Пластинки для зубов</li>
+                        <li><i class="fas fa-check-circle"></i> Капы для выравнивания</li>
+                    </ul>
+                    <button class="btn btn-outline-primary service-btn">Подробнее</button>
+                </div>
+
+                <!-- Профилактика -->
+                <div class="service-category">
+
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Профилактика</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Профессиональная гигиена</li>
+                        <li><i class="fas fa-check-circle"></i> Фторирование зубов</li>
+                        <li><i class="fas fa-check-circle"></i> Обучение гигиене</li>
+                        <li><i class="fas fa-check-circle"></i> Профилактические осмотры</li>
+                    </ul>
+                    <button class="btn btn-outline-primary service-btn">Подробнее</button>
+                </div>
+
+                <!-- Хирургия -->
+                <div class="service-category">
+
+                    <div class="category-header">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                        <h3>Хирургия</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Удаление зубов</li>
+                        <li><i class="fas fa-check-circle"></i> Пластика уздечек</li>
+                        <li><i class="fas fa-check-circle"></i> Детское протезирование</li>
+                    </ul>
+                    <button class="btn btn-outline-primary service-btn">Подробнее</button>
+                </div>
             </div>
         </div>
     </div>
@@ -249,107 +323,194 @@
     </div>
 
     <div id="prices-content" class="content-template">
-        <h2>Наши цены</h2>
-        <div class="prices-container">
-            <!-- Терапевтическая стоматология -->
-            <div class="price-category">
-                <h3><i class="fas fa-teeth"></i> Терапевтическая стоматология</h3>
-                <div class="price-item">
-                    <div class="price-service">Лечение кариеса молочного зуба</div>
-                    <div class="price-amount">3 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Лечение кариеса постоянного зуба</div>
-                    <div class="price-amount">4 500 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Лечение пульпита (1 канал)</div>
-                    <div class="price-amount">5 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Герметизация фиссур (1 зуб)</div>
-                    <div class="price-amount">1 800 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Лечение стоматита</div>
-                    <div class="price-amount">2 500 руб.</div>
-                </div>
-            </div>
+        <div class="container">
+            <h2 class="text-center mb-4">Наши цены</h2>
+            <p class="text-center mb-5">Прозрачное ценообразование без скрытых платежей</p>
 
-            <!-- Ортодонтия -->
-            <div class="price-category">
-                <h3><i class="fas fa-teeth-open"></i> Ортодонтия</h3>
-                <div class="price-item">
-                    <div class="price-service">Консультация ортодонта</div>
-                    <div class="price-amount">1 500 руб.</div>
+            <div class="prices-container">
+                <!-- Терапевтическая стоматология -->
+                <div class="price-category">
+                    <div class="category-header">
+                        <i class="fas fa-tooth"></i>
+                        <h3>Терапевтическая стоматология</h3>
+                    </div>
+                    <div class="price-list">
+                        <div class="price-item">
+                            <div class="price-service">Лечение кариеса молочного зуба</div>
+                            <div class="price-amount">3 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Лечение кариеса постоянного зуба</div>
+                            <div class="price-amount">4 500 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Лечение пульпита (1 канал)</div>
+                            <div class="price-amount">5 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Герметизация фиссур (1 зуб)</div>
+                            <div class="price-amount">1 800 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Лечение стоматита</div>
+                            <div class="price-amount">2 500 руб.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="price-item">
-                    <div class="price-service">Съемная пластинка</div>
-                    <div class="price-amount">15 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Брекет-система (1 челюсть)</div>
-                    <div class="price-amount">35 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Капы для выравнивания</div>
-                    <div class="price-amount">25 000 руб.</div>
-                </div>
-            </div>
 
-            <!-- Профилактика -->
-            <div class="price-category">
-                <h3><i class="fas fa-shield-alt"></i> Профилактика</h3>
-                <div class="price-item">
-                    <div class="price-service">Профессиональная гигиена</div>
-                    <div class="price-amount">2 500 руб.</div>
+                <!-- Ортодонтия -->
+                <div class="price-category">
+                    <div class="category-header">
+                        <i class="fas fa-teeth-open"></i>
+                        <h3>Ортодонтия</h3>
+                    </div>
+                    <div class="price-list">
+                        <div class="price-item">
+                            <div class="price-service">Консультация ортодонта</div>
+                            <div class="price-amount">1 500 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Съемная пластинка</div>
+                            <div class="price-amount">15 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Брекет-система (1 челюсть)</div>
+                            <div class="price-amount">35 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Капы для выравнивания</div>
+                            <div class="price-amount">25 000 руб.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="price-item">
-                    <div class="price-service">Фторирование (1 зуб)</div>
-                    <div class="price-amount">500 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Обучение гигиене</div>
-                    <div class="price-amount">1 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Профилактический осмотр</div>
-                    <div class="price-amount">800 руб.</div>
-                </div>
-            </div>
 
-            <!-- Хирургия -->
-            <div class="price-category">
-                <h3><i class="fa-solid fa-hand-holding-medical"></i> Хирургия</h3>
-                <div class="price-item">
-                    <div class="price-service">Удаление молочного зуба</div>
-                    <div class="price-amount">2 000 руб.</div>
+                <!-- Профилактика -->
+                <div class="price-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Профилактика</h3>
+                    </div>
+                    <div class="price-list">
+                        <div class="price-item">
+                            <div class="price-service">Профессиональная гигиена</div>
+                            <div class="price-amount">2 500 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Фторирование (1 зуб)</div>
+                            <div class="price-amount">500 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Обучение гигиене</div>
+                            <div class="price-amount">1 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Профилактический осмотр</div>
+                            <div class="price-amount">800 руб.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="price-item">
-                    <div class="price-service">Удаление постоянного зуба</div>
-                    <div class="price-amount">4 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Пластика уздечки</div>
-                    <div class="price-amount">6 000 руб.</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-service">Детское протезирование</div>
-                    <div class="price-amount">от 10 000 руб.</div>
+
+                <!-- Хирургия -->
+                <div class="price-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                        <h3>Хирургия</h3>
+                    </div>
+                    <div class="price-list">
+                        <div class="price-item">
+                            <div class="price-service">Удаление молочного зуба</div>
+                            <div class="price-amount">2 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Удаление постоянного зуба</div>
+                            <div class="price-amount">4 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Пластика уздечки</div>
+                            <div class="price-amount">6 000 руб.</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-service">Детское протезирование</div>
+                            <div class="price-amount">от 10 000 руб.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="promotions-content" class="content-template">
-        <h2>Акции</h2>
-        <div class="promotion-card">
-            <h4>Скидка 20% на первый визит</h4>
-            <p>Действует до 31.12.2023</p>
-        </div>
-        <div class="promotion-card">
-            <h4>Бесплатная консультация ортодонта</h4>
-            <p>При записи на лечение</p>
+        <div class="container">
+            <h2 class="text-center mb-4">Акции и специальные предложения</h2>
+            <p class="text-center mb-5">Специальные условия для наших пациентов</p>
+
+            <div class="promotions-container">
+                <!-- Акция 1 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Акция</div>
+                    <div class="promotion-content">
+                        <h3>Скидка 20% на первый визит</h3>
+                        <p class="promotion-date">Действует до 31.12.2025</p>
+                        <p>Для новых пациентов при первом посещении клиники</p>
+                        <button class="btn btn-primary mt-3">Записаться онлайн</button>
+                    </div>
+                </div>
+
+                <!-- Акция 2 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Акция</div>
+                    <div class="promotion-content">
+                        <h3>Бесплатная консультация ортодонта</h3>
+                        <p class="promotion-date">Постоянное предложение</p>
+                        <p>При записи на любое ортодонтическое лечение</p>
+                        <button class="btn btn-primary mt-3">Получить консультацию</button>
+                    </div>
+                </div>
+
+                <!-- Акция 3 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Семейная</div>
+                    <div class="promotion-content">
+                        <h3>10% скидка для второго ребенка</h3>
+                        <p class="promotion-date">Действует до 31.12.2025</p>
+                        <p>Если в семье двое и более детей - скидка на лечение младшего ребенка</p>
+                        <button class="btn btn-primary mt-3">Узнать подробности</button>
+                    </div>
+                </div>
+
+                <!-- Акция 4 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Комплекс</div>
+                    <div class="promotion-content">
+                        <h3>Гигиена + фторирование = 3 500 руб.</h3>
+                        <p class="promotion-date">Действует до 31.09.2025</p>
+                        <p>Комплексная профилактика для здоровых зубов со скидкой 25%</p>
+                        <button class="btn btn-primary mt-3">Записаться на процедуру</button>
+                    </div>
+                </div>
+
+                <!-- Акция 5 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Подарок</div>
+                    <div class="promotion-content">
+                        <h3>Бесплатная чистка на День рождения</h3>
+                        <p class="promotion-date">Действует круглый год</p>
+                        <p>Профессиональная чистка зубов в месяц рождения ребенка</p>
+                        <button class="btn btn-primary mt-3">Забронировать подарок</button>
+                    </div>
+                </div>
+
+                <!-- Акция 6 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Абонемент</div>
+                    <div class="promotion-content">
+                        <h3>Годовой абонемент "Здоровые зубки"</h3>
+                        <p class="promotion-date">Специальная цена 15 000 руб.</p>
+                        <p>4 осмотра + 2 профессиональные чистки + фторирование</p>
+                        <button class="btn btn-primary mt-3">Приобрести абонемент</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -376,6 +537,55 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="appointmentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Запись на приём</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="mb-3">
+                            <label class="form-label">Имя ребёнка</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Возраст</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Телефон родителя</label>
+                            <input type="tel" class="form-control" value="+7 (800) 123-45-67" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Услуга</label>
+                            <select class="form-select">
+                                <option>Консультация</option>
+                                <option>Лечение кариеса</option>
+                                <option>Исправление прикуса</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Желаемая дата</label>
+                            <input type="date" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" form="appointmentForm" class="btn btn-primary">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successAlert" class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3"
+        style="display: none; z-index: 1100;">
+        <strong>Заявка принята!</strong> Мы свяжемся с вами в ближайшее время.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
